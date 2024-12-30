@@ -40,6 +40,7 @@ export class UserService {
     _user.name = user.name;
     _user.email = user.email;
 
+    await this.authService.update(id, user);
     await this.userRepository.update(_user);
   }
 
