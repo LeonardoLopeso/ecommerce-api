@@ -1,7 +1,7 @@
 import express, { NextFunction, Request, Response } from "express";
 import { UnauthorizedError } from "../errors/unauthorized.error";
 import { DecodedIdToken, getAuth } from "firebase-admin/auth";
-import { UserService } from "../services/use.service";
+import { UserService } from "../services/user.service";
 import { ForbiddenError } from "../errors/forbidden.error";
 
 export const auth = (app: express.Express) => {
